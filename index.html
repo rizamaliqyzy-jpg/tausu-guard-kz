@@ -1,268 +1,536 @@
-Potential partners
-🚨
-Ministry of Emergency Situations
-Republic of Kazakhstan
-🔴
-Red Cross Kazakhstan
-Humanitarian partner
-🌲
-Kazakh National Parks
-Ile-Alatau · Burabay · Altyn-Emel
-🏛️
-Almaty City Administration
-Akimat of Almaty
-🚨
-Ministry of Emergency Situations
-Republic of Kazakhstan
-🔴
-Red Cross Kazakhstan
-Humanitarian partner
-🌲
-Kazakh National Parks
-Ile-Alatau · Burabay · Altyn-Emel
-🏛️
-Almaty City Administration
-Akimat of Almaty
-🛡️ Get started
-Register or Sign In
-Join TauSu Guard to stay safe in the mountains. Register your profile with medical info and emergency contacts — or sign in to your existing account.
-📋 Register 🔑 Sign In
-Kazakhstan · Safety Tech · 2025
-TauSuGuard
-No one left behind
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-Real-time safety tracking for hikers, skiers, and outdoor adventurers across Kazakhstan's mountains. Know where your people are. Bring everyone home safe.
+  <!-- Content Security Policy — adjusted for GitHub Pages hosting -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com data:; frame-src https://www.google.com; connect-src 'self' https://api.open-meteo.com; img-src 'self' data: blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"/>
 
-📍 View live demo
-Scroll
-340+
-Mountain rescue incidents
-in Kazakhstan per year
-73%
-Of incidents happen
-after 16:00
-4×
-Faster rescue with
-real-time location sharing
-0
-Dedicated hiker safety
-platforms in KZ today
-The Problem
-Kazakhstan's mountains
-are beautiful — and dangerous
-Ile-Alatau, Shymbulak, Charyn Canyon — millions of visitors every year. But when something goes wrong, rescue teams are blind. No tracking. No alerts. No system.
+  <!-- MIN-1: Prevent search engines indexing this demo before real backend is live -->
+  <meta name="robots" content="noindex, nofollow"/>
 
-🌑
-Caught after dark
-Hikers underestimate sunset times and trail difficulty. At high altitude, temperatures drop 18°C after dark. Most accidents happen in the final hours of a hike.
+  <!-- CSRF token placeholder — your server should inject a real value here on each page load.
+       Backend reads it from the DOM; client sends it as X-CSRF-Token header on every POST.
+  <meta name="csrf-token" content="REPLACE_WITH_SERVER_GENERATED_TOKEN"/>
+  -->
 
-73%
-of incidents occur after 16:00
-📵
-No signal, no help
-Cell coverage ends above 2,000m on most Kazakhstani trails. Once a hiker is in trouble, there is no way to call for help or share their location with anyone.
+  <meta name="description" content="TauSu Guard — Real-time safety tracking for hikers and outdoor adventurers across Kazakhstan's mountains. No one left behind."/>
+  <meta property="og:title" content="TauSu Guard KZ — No One Left Behind"/>
+  <meta property="og:description" content="Real-time GPS safety tracking for Kazakhstan's mountains. Register, share your location, stay safe."/>
+  <meta property="og:type" content="website"/>
+  <title>TauSu Guard KZ — No One Left Behind</title>
 
-61%
-of rescue calls involve solo hikers
-🩺
-Unknown medical info
-When an injured hiker is found unconscious, rescue teams have no access to blood type, allergies, or emergency contacts. Every minute of delay costs lives.
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 
-2×
-higher survival with pre-shared medical data
-🗺️
-No centralized system
-Park rangers, rescue teams, and families have no shared view of who is on the mountain. There is no platform in Kazakhstan purpose-built for outdoor safety tracking.
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/landing.css"/>
+  <link rel="stylesheet" href="css/dashboard.css"/>
+</head>
+<body>
 
-0
-dedicated outdoor safety platforms in KZ
-How It Works
-Three steps to a safer hike
-TauSu Guard works seamlessly — for the hiker, and for the people responsible for their safety.
+<!-- ════════════════════════════════════════
+     LANDING PAGE
+════════════════════════════════════════ -->
+<div id="landing-page">
 
-1
-📋
-Register before you go
-Hikers register on the website or app. They fill out their medical profile — age, blood type, allergies, and emergency contact — before starting their hike.
+  <!-- PARTNER BANNER -->
+  <div class="partner-banner">
+    <div class="partner-banner__label" id="partner-label">Potential <span>partners</span></div>
+    <div class="partner-track-wrap">
+      <div class="partner-track">
+        <!-- Set 1 -->
+        <div class="partner-logo"><div class="partner-emblem pe-red">🚨</div><div><div class="partner-name">Ministry of Emergency Situations</div><span class="partner-tag">Republic of Kazakhstan</span></div></div>
+        <div class="partner-logo"><div class="partner-emblem pe-red">🔴</div><div><div class="partner-name">Red Cross Kazakhstan</div><span class="partner-tag">Humanitarian partner</span></div></div>
+        <div class="partner-logo"><div class="partner-emblem pe-green">🌲</div><div><div class="partner-name">Kazakh National Parks</div><span class="partner-tag">Ile-Alatau · Burabay · Altyn-Emel</span></div></div>
+        <div class="partner-logo"><div class="partner-emblem pe-blue">🏛️</div><div><div class="partner-name">Almaty City Administration</div><span class="partner-tag">Akimat of Almaty</span></div></div>
+        <!-- Set 2 — duplicate for seamless loop -->
+        <div class="partner-logo"><div class="partner-emblem pe-red">🚨</div><div><div class="partner-name">Ministry of Emergency Situations</div><span class="partner-tag">Republic of Kazakhstan</span></div></div>
+        <div class="partner-logo"><div class="partner-emblem pe-red">🔴</div><div><div class="partner-name">Red Cross Kazakhstan</div><span class="partner-tag">Humanitarian partner</span></div></div>
+        <div class="partner-logo"><div class="partner-emblem pe-green">🌲</div><div><div class="partner-name">Kazakh National Parks</div><span class="partner-tag">Ile-Alatau · Burabay · Altyn-Emel</span></div></div>
+        <div class="partner-logo"><div class="partner-emblem pe-blue">🏛️</div><div><div class="partner-name">Almaty City Administration</div><span class="partner-tag">Akimat of Almaty</span></div></div>
+      </div>
+    </div>
+  </div>
 
-Takes under 2 minutes. Saved securely. Accessible to rescue teams instantly.
-2
-📍
-Share your location
-With one tap, hikers enable GPS location sharing. Their position is shown live on the admin map. They select their trail and check in at each checkpoint.
+  <!-- REGISTER / SIGN IN SECTION -->
+  <section class="land-reg-section">
+    <div class="land-reg-inner">
+      <div class="land-reg-tag">🛡️ Get started</div>
+      <div class="land-reg-title">Register or Sign In</div>
+      <div class="land-reg-sub">Join TauSu Guard to stay safe in the mountains. Register your profile with medical info and emergency contacts — or sign in to your existing account.</div>
+      <div class="land-reg-btns">
+        <button id="land-reg-btn" class="btn-land-register">📋 Register</button>
+        <button id="land-signin-btn" class="btn-land-signin">🔑 Sign In</button>
+      </div>
+    </div>
+  </section>
 
-Works on phone GPS. Satellite integration coming for zero-signal zones.
-3
-🛡️
-AI monitors, alerts fire
-TauSu Guard watches every hiker's pace, position, and the weather. If someone stops moving or bad weather hits — alerts fire automatically.
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="hero__mountains" viewBox="0 0 1440 280" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <polygon points="0,280 0,180 120,80 240,160 360,60 480,140 600,40 720,120 840,30 960,110 1080,50 1200,130 1320,70 1440,150 1440,280" fill="white"/>
+      <polygon points="0,280 0,200 180,120 320,180 460,100 580,160 700,80 820,150 940,90 1060,160 1200,100 1320,150 1440,110 1440,280" fill="white" opacity="0.5"/>
+    </svg>
+    <div class="hero__content">
+      <div class="hero__tag"><span class="hero__tag-dot" aria-hidden="true"></span> <span id="hero-tag-text">Kazakhstan · Safety Tech · 2025</span></div>
+      <h1 class="hero__title">TauSu<em>Guard</em></h1>
+      <p id="hero-tagline" class="hero__tagline">No one left behind</p>
+      <p id="hero-sub" class="hero__sub">Real-time safety tracking for hikers, skiers, and outdoor adventurers across Kazakhstan's mountains. Know where your people are. Bring everyone home safe.</p>
+      <div class="hero__btns">
+        <button id="hero-btn1" class="btn-hero-primary">📍 View live demo</button>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true"><span id="hero-scroll">Scroll</span><div class="hero__scroll-arrow"></div></div>
+  </section>
 
-Sunset countdowns, weather warnings, and SOS alerts to emergency contacts.
-Features
-Everything a safety platform needs
-Built specifically for Kazakhstan's outdoor environment — mountains, lakes, and the people who explore them.
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stats-strip__item"><div id="stat1-num" class="stats-strip__num">340+</div><div id="stat1-label" class="stats-strip__label">Mountain rescue incidents<br>in Kazakhstan per year</div></div>
+    <div class="stats-strip__item"><div id="stat2-num" class="stats-strip__num">73%</div><div id="stat2-label" class="stats-strip__label">Of incidents happen<br>after 16:00</div></div>
+    <div class="stats-strip__item"><div id="stat3-num" class="stats-strip__num">4×</div><div id="stat3-label" class="stats-strip__label">Faster rescue with<br>real-time location sharing</div></div>
+    <div class="stats-strip__item"><div id="stat4-num" class="stats-strip__num">0</div><div id="stat4-label" class="stats-strip__label">Dedicated hiker safety<br>platforms in KZ today</div></div>
+  </div>
 
-🗺️
-Live trail map
-Detailed maps of Ile-Alatau, Shymbulak and other trails. Every registered hiker shown as a live pin with their trail, elevation, and status.
+  <!-- PROBLEM SECTION -->
+  <div id="problem">
+    <div class="section">
+      <div id="prob-tag" class="section__tag">The Problem</div>
+      <h2 id="prob-title" class="section__title">Kazakhstan's mountains<br>are beautiful — and dangerous</h2>
+      <p id="prob-sub" class="section__sub">Ile-Alatau, Shymbulak, Charyn Canyon — millions of visitors every year. But when something goes wrong, rescue teams are blind. No tracking. No alerts. No system.</p>
+      <div class="problem-grid">
+        <div class="prob-card"><span class="prob-card__icon">🌑</span><h3 id="prob1-title" class="prob-card__title">Caught after dark</h3><p id="prob1-text" class="prob-card__text">Hikers underestimate sunset times and trail difficulty. At high altitude, temperatures drop 18°C after dark. Most accidents happen in the final hours of a hike.</p><div id="prob1-stat" class="prob-card__stat">73%</div><div id="prob1-statlabel" class="prob-card__stat-label">of incidents occur after 16:00</div></div>
+        <div class="prob-card"><span class="prob-card__icon">📵</span><h3 id="prob2-title" class="prob-card__title">No signal, no help</h3><p id="prob2-text" class="prob-card__text">Cell coverage ends above 2,000m on most Kazakhstani trails. Once a hiker is in trouble, there is no way to call for help or share their location with anyone.</p><div id="prob2-stat" class="prob-card__stat">61%</div><div id="prob2-statlabel" class="prob-card__stat-label">of rescue calls involve solo hikers</div></div>
+        <div class="prob-card"><span class="prob-card__icon">🩺</span><h3 id="prob3-title" class="prob-card__title">Unknown medical info</h3><p id="prob3-text" class="prob-card__text">When an injured hiker is found unconscious, rescue teams have no access to blood type, allergies, or emergency contacts. Every minute of delay costs lives.</p><div id="prob3-stat" class="prob-card__stat">2×</div><div id="prob3-statlabel" class="prob-card__stat-label">higher survival with pre-shared medical data</div></div>
+        <div class="prob-card"><span class="prob-card__icon">🗺️</span><h3 id="prob4-title" class="prob-card__title">No centralized system</h3><p id="prob4-text" class="prob-card__text">Park rangers, rescue teams, and families have no shared view of who is on the mountain. There is no platform in Kazakhstan purpose-built for outdoor safety tracking.</p><div id="prob4-stat" class="prob-card__stat">0</div><div id="prob4-statlabel" class="prob-card__stat-label">dedicated outdoor safety platforms in KZ</div></div>
+      </div>
+    </div>
+  </div>
 
-⏱️
-Sunset countdown
-Real-time countdown to sunset for each active hiking zone. AI-generated descent alerts based on the hiker's current position and trail difficulty.
+  <!-- HOW IT WORKS -->
+  <div id="how" class="hiw-section">
+    <div class="hiw-inner">
+      <div id="hiw-tag" class="section__tag">How It Works</div>
+      <h2 id="hiw-title" class="section__title">Three steps to a safer hike</h2>
+      <p id="hiw-sub" class="section__sub">TauSu Guard works seamlessly — for the hiker, and for the people responsible for their safety.</p>
+      <div class="hiw-steps">
+        <div class="hiw-step"><div class="step-num">1</div><span class="step-icon">📋</span><h3 id="step1-title" class="step-title">Register before you go</h3><p id="step1-text" class="step-text">Hikers register on the website or app. They fill out their medical profile — age, blood type, allergies, and emergency contact — before starting their hike.</p><div id="step1-detail" class="step-detail">Takes under 2 minutes. Saved securely. Accessible to rescue teams instantly.</div></div>
+        <div class="hiw-step"><div class="step-num">2</div><span class="step-icon">📍</span><h3 id="step2-title" class="step-title">Share your location</h3><p id="step2-text" class="step-text">With one tap, hikers enable GPS location sharing. Their position is shown live on the admin map. They select their trail and check in at each checkpoint.</p><div id="step2-detail" class="step-detail">Works on phone GPS. Satellite integration coming for zero-signal zones.</div></div>
+        <div class="hiw-step"><div class="step-num">3</div><span class="step-icon">🛡️</span><h3 id="step3-title" class="step-title">AI monitors, alerts fire</h3><p id="step3-text" class="step-text">TauSu Guard watches every hiker's pace, position, and the weather. If someone stops moving or bad weather hits — alerts fire automatically.</p><div id="step3-detail" class="step-detail">Sunset countdowns, weather warnings, and SOS alerts to emergency contacts.</div></div>
+      </div>
+    </div>
+  </div>
 
-🌦️
-Weather alerts
-Live weather data for each trail. Automatic warnings pushed to hikers when rain, wind, or temperature drops are forecast during their session.
+  <!-- FEATURES -->
+  <div id="features" class="features-section">
+    <div id="feat-tag" class="section__tag">Features</div>
+    <h2 id="feat-title" class="section__title">Everything a safety platform needs</h2>
+    <p id="feat-sub" class="section__sub">Built specifically for Kazakhstan's outdoor environment — mountains, lakes, and the people who explore them.</p>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-card__icon">🗺️</div><h3 id="f1-title" class="feat-card__title">Live trail map</h3><p id="f1-text" class="feat-card__text">Detailed maps of Ile-Alatau, Shymbulak and other trails. Every registered hiker shown as a live pin with their trail, elevation, and status.</p></div>
+      <div class="feat-card"><div class="feat-card__icon">⏱️</div><h3 id="f2-title" class="feat-card__title">Sunset countdown</h3><p id="f2-text" class="feat-card__text">Real-time countdown to sunset for each active hiking zone. AI-generated descent alerts based on the hiker's current position and trail difficulty.</p></div>
+      <div class="feat-card"><div class="feat-card__icon">🌦️</div><h3 id="f3-title" class="feat-card__title">Weather alerts</h3><p id="f3-text" class="feat-card__text">Live weather data for each trail. Automatic warnings pushed to hikers when rain, wind, or temperature drops are forecast during their session.</p></div>
+      <div class="feat-card"><div class="feat-card__icon">🩺</div><h3 id="f4-title" class="feat-card__title">Medical profiles</h3><p id="f4-text" class="feat-card__text">Every registered hiker's blood type, allergies, and emergency contacts stored securely. One click for rescue teams to access full medical info on the admin dashboard.</p></div>
+      <div class="feat-card"><div class="feat-card__icon">🔔</div><h3 id="f5-title" class="feat-card__title">Smart alerts</h3><p id="f5-text" class="feat-card__text">No movement for 30+ minutes? Behind checkpoint schedule? Out of safe zone? Automatic alerts fire to the admin dashboard, the hiker, and their emergency contact.</p></div>
+      <div class="feat-card"><div class="feat-card__icon">📡</div><h3 id="f6-title" class="feat-card__title">Satellite GPS</h3><p id="f6-text" class="feat-card__text">Satellite-based tracking for zero-signal mountain zones via Garmin inReach and LoRa mesh networks.</p><span id="coming1" class="feat-card__badge">Coming soon</span></div>
+      <div class="feat-card"><div class="feat-card__icon">🏊</div><h3 id="f7-title" class="feat-card__title">Swimmer safety zones</h3><p id="f7-text" class="feat-card__text">Kapchagai, Burabay and other lake zones mapped with safe and danger boundaries. Waterproof wristband chips track swimmers in real time.</p><span id="coming2" class="feat-card__badge">Coming soon</span></div>
+      <div class="feat-card"><div class="feat-card__icon">👥</div><h3 id="f8-title" class="feat-card__title">Group hiking</h3><p id="f8-text" class="feat-card__text">Register as a group with a designated group leader. The admin dashboard tracks the whole group together, flags if anyone splits from the group's route.</p><span id="coming3" class="feat-card__badge">Coming soon</span></div>
+      <div class="feat-card"><div class="feat-card__icon">🌐</div><h3 id="f9-title" class="feat-card__title">3 languages</h3><p id="f9-text" class="feat-card__text">Full support for English, Russian, and Kazakh — making the platform accessible to all hikers across Kazakhstan and the region.</p></div>
+    </div>
+  </div>
 
-🩺
-Medical profiles
-Every registered hiker's blood type, allergies, and emergency contacts stored securely. One click for rescue teams to access full medical info on the admin dashboard.
+  <!-- CTA -->
+  <div class="cta-section">
+    <div class="cta-inner">
+      <h2 id="cta-title" class="cta-title">Ready to see it in action?</h2>
+      <p id="cta-sub" class="cta-sub">Explore the live admin dashboard — see real-time hiker tracking, weather alerts, sunset countdowns, and medical profiles all in one place.</p>
+      <button id="cta-btn" class="btn-cta">Open live dashboard →</button>
+    </div>
+  </div>
 
-🔔
-Smart alerts
-No movement for 30+ minutes? Behind checkpoint schedule? Out of safe zone? Automatic alerts fire to the admin dashboard, the hiker, and their emergency contact.
+  <!-- FOOTER -->
+  <footer class="land-footer">
+    <div>
+      <div class="foot-logo">TauSu<em>Guard</em></div>
+      <div id="foot-tagline" class="foot-tagline">No one left behind · Kazakhstan · 2025</div>
+    </div>
+    <div id="foot-right" class="foot-right">Built for the mountains of Kazakhstan<br>Solo founder · Early stage · Open to partnerships</div>
+  </footer>
 
-📡
-Satellite GPS
-Satellite-based tracking for zero-signal mountain zones via Garmin inReach and LoRa mesh networks.
-
-Coming soon
-🏊
-Swimmer safety zones
-Kapchagai, Burabay and other lake zones mapped with safe and danger boundaries. Waterproof wristband chips track swimmers in real time.
-
-Coming soon
-👥
-Group hiking
-Register as a group with a designated group leader. The admin dashboard tracks the whole group together, flags if anyone splits from the group's route.
-
-Coming soon
-🌐
-3 languages
-Full support for English, Russian, and Kazakh — making the platform accessible to all hikers across Kazakhstan and the region.
-
-Ready to see it in action?
-Explore the live admin dashboard — see real-time hiker tracking, weather alerts, sunset countdowns, and medical profiles all in one place.
-
-Open live dashboard →
-TauSuGuard
-No one left behind · Kazakhstan · 2025
-Built for the mountains of Kazakhstan
-Solo founder · Early stage · Open to partnerships
-TauSuGuardKZ · Safety Dashboard
-Live tracking active · --:--
-← Home 🔔 Test alert + Register
-EN RU KZ
-Safety Dashboard
-Ile-Alatau National Park · Shymbulak trails · Almaty
-🌅 Loading… 1 alert 18 active
-18
-Active
-2
-Warnings
-1
-Alerts
-Legend Alert · no movement Warning · weak signal Safe · online Offline >15 min Checkpoint Trail A Trail B Trail C Trail D
-  
-CP1
-CP2
-CP3
-!
-Asel · Alert
-~
-⚠ Last seen 22 min ago
-Shymbulak · Ile-Alatau NP
-N
-LIVE · 6 tracked
-Active users 18 registered today
-4 online
-1 weak signal
-1 offline (>15 min)
-AS
-Demo User A
-Trail A · 3,200m · no movement 47 min
-Alert now Med info
-DM
-Demo User B
-Trail B · 2,600m · slow pace
-Warn 8 min ago Med info
-BT
-Demo User C
-Trail A · 2,100m · descending
-Safe 2 min ago Med info
-ZA
-Demo User D
-Trail C · 2,900m · offline
-Offline 22 min ago Med info
-MA
-Demo User E
-Trail D · 1,800m · ascending
-Safe 1 min ago Med info
-KS
-Demo User F
-Trail B · 2,300m · on pace
-Safe 4 min ago Med info
-AI Demo User A has not moved in 47 min at 3,200m. Sunset in 17 min — immediate descent required. Demo User D has been offline for 22 min at 2,900m — last known position marked on map.
-🔑 Sign In
-✕
-Phone number
-+7 700 000 0000
-Password
-••••••••
-Sign In →
-Don't have an account? Register here
-
-🏔️ Register
-✕
-Personal details
-First name
-e.g. Asel
-Last name
-e.g. Seitkali
-Age
-28
-Phone
-+7 700 000 0000
-Trail 
-Select a trail
-Journey duration
-1 day 2 days 3 days 4+ days
-📍 GPS location
-Requesting GPS…
-Blood type
-A+ A− B+ B− AB+ AB− O+ O−
-Allergies
-Select all that apply, or type below
-Penicillin Aspirin Ibuprofen Bee stings Nuts Shellfish Latex None
-Other allergies or medical conditions
-e.g. asthma, diabetes, other medications...
-SOS / Emergency contact
-Contact name
-e.g. Daulet Seitkali
-Relationship
-e.g. Brother
-Contact phone
-+7 701 000 0000
-Secondary contact (optional)
-+7 702 000 0000
-✓ Register & save medical info
-✅
-Registered!
-Your medical profile has been saved and is now available to rescue teams on the admin dashboard.
-
-You will appear in the active users list once location sharing is enabled.
+</div><!-- end #landing-page -->
 
 
-Done
-✕
-AS
-Demo User A
-Trail A · 3,200m
-Age
-28
-Blood type
-B+
-⚠ Allergies
-Penicillin, bee stings
-📞 SOS / Emergency contact
-Demo Contact A (Brother) · +7 700 000 0001
+<!-- ════════════════════════════════════════
+     DASHBOARD PAGE
+════════════════════════════════════════ -->
+<div id="dashboard-page">
+
+  <header class="topbar">
+    <div class="topbar__logo">TauSu<em>Guard</em><small>KZ · Safety Dashboard</small></div>
+    <div class="topbar__center">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span id="dash-live">Live tracking active</span>
+      <span aria-hidden="true">·</span>
+      <span class="clock" id="clock" aria-live="polite">--:--</span>
+    </div>
+    <div class="topbar__actions">
+      <button id="btn-home"       class="reg-btn reg-btn--ghost">← Home</button>
+      <button id="btn-test-alert" class="reg-btn reg-btn--blue">🔔 Test alert</button>
+      <button id="btn-register"   class="reg-btn">+ Register</button>
+      <div class="lang-row" role="group" aria-label="Language">
+        <button class="lb on">EN</button>
+        <button class="lb">RU</button>
+        <button class="lb">KZ</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+    <div class="panel">
+
+      <!-- Panel header -->
+      <div class="panel-head">
+        <div>
+          <div id="panel-hiker-title" class="panel-head__title">Safety Dashboard</div>
+          <div id="panel-hiker-sub"   class="panel-head__sub">Ile-Alatau National Park · Shymbulak trails · Almaty</div>
+        </div>
+        <div class="panel-head__badges">
+          <span class="badge b-warn timer-val" id="sunset-badge">🌅 Loading…</span>
+          <span id="badge-alert1"  class="badge b-red">1 alert</span>
+          <span id="badge-active18" class="badge b-green">18 active</span>
+        </div>
+      </div>
+
+      <!-- Metrics -->
+      <div class="metrics">
+        <div class="metric-card"><div class="metric-card__val" id="mc-val-hikers">18</div><div id="mc-hikers" class="metric-card__lbl">Active</div></div>
+        <div class="metric-card"><div class="metric-card__val metric-card__val--warn" id="mc-val-warnings">2</div><div id="mc-warnings" class="metric-card__lbl">Warnings</div></div>
+        <div class="metric-card"><div class="metric-card__val metric-card__val--alert" id="mc-val-alerts">1</div><div id="mc-alerts" class="metric-card__lbl">Alerts</div></div>
+      </div>
+
+      <!-- Map Legend -->
+      <div class="map-legend">
+        <span class="map-legend__title">Legend</span>
+        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#E24B4A"/><circle cx="6" cy="5" r="2.2" fill="white"/></svg>Alert · no movement</span>
+        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#EF9F27"/><circle cx="6" cy="5" r="2.2" fill="white"/></svg>Warning · weak signal</span>
+        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#1D9E75"/><circle cx="6" cy="5" r="2.2" fill="white"/></svg>Safe · online</span>
+        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#aaa" stroke="#bbb" stroke-width="1"/><circle cx="6" cy="5" r="2.2" fill="white" opacity="0.7"/></svg>Offline &gt;15 min</span>
+        <span class="legend-item"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="white" stroke="#444" stroke-width="1.5"/><circle cx="6" cy="6" r="2.2" fill="#444"/></svg>Checkpoint</span>
+        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#E24B4A" stroke-width="2.5" stroke-dasharray="5 3"/></svg>Trail A</span>
+        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#EF9F27" stroke-width="2.5" stroke-dasharray="5 3"/></svg>Trail B</span>
+        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#1D9E75" stroke-width="2.5" stroke-dasharray="5 3"/></svg>Trail C</span>
+        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#378ADD" stroke-width="2.5" stroke-dasharray="5 3"/></svg>Trail D</span>
+      </div>
+
+      <!-- Live Map -->
+      <div class="map-box" id="live-map-box">
+
+        <!-- Google Maps satellite embed — Shymbulak / Ile-Alatau (zoom ~14) -->
+        <iframe
+          id="gmap-frame"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6000!2d76.9480!3d43.1280!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2skz!4v1700000000000!5m2!1sen!2skz"
+          style="position:absolute;inset:0;width:100%;height:100%;border:none;display:block;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="Ile-Alatau National Park · Shymbulak · Almaty"
+        ></iframe>
+
+        <!-- Canvas: trail paths drawn by tracking.js -->
+        <canvas id="track-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;"></canvas>
+
+        <!-- SVG: hiker pins, checkpoints, compass -->
+        <svg id="pin-layer" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;">
+          <defs>
+            <filter id="pin-shadow" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/></filter>
+            <filter id="label-shadow" x="-10%" y="-20%" width="130%" height="150%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.2"/></filter>
+          </defs>
+
+          <!-- Checkpoint markers -->
+          <g id="cp1-marker"><circle cx="0" cy="0" r="7" fill="#fff" stroke="#3a3a3a" stroke-width="1.8" filter="url(#pin-shadow)"/><circle cx="0" cy="0" r="3.2" fill="#3a3a3a"/></g>
+          <g id="cp1-label"><rect x="0" y="0" width="28" height="13" rx="3" fill="white" opacity="0.95" filter="url(#label-shadow)"/><text x="14" y="9" text-anchor="middle" font-size="7.5" fill="#222" font-family="DM Sans,sans-serif" font-weight="600">CP1</text></g>
+          <g id="cp2-marker"><circle cx="0" cy="0" r="7" fill="#fff" stroke="#3a3a3a" stroke-width="1.8" filter="url(#pin-shadow)"/><circle cx="0" cy="0" r="3.2" fill="#3a3a3a"/></g>
+          <g id="cp2-label"><rect x="0" y="0" width="28" height="13" rx="3" fill="white" opacity="0.95" filter="url(#label-shadow)"/><text x="14" y="9" text-anchor="middle" font-size="7.5" fill="#222" font-family="DM Sans,sans-serif" font-weight="600">CP2</text></g>
+          <g id="cp3-marker"><circle cx="0" cy="0" r="7" fill="#fff" stroke="#3a3a3a" stroke-width="1.8" filter="url(#pin-shadow)"/><circle cx="0" cy="0" r="3.2" fill="#3a3a3a"/></g>
+          <g id="cp3-label"><rect x="0" y="0" width="28" height="13" rx="3" fill="white" opacity="0.95" filter="url(#label-shadow)"/><text x="14" y="9" text-anchor="middle" font-size="7.5" fill="#222" font-family="DM Sans,sans-serif" font-weight="600">CP3</text></g>
+
+          <!-- Asel — ALERT (red) -->
+          <g id="pin-asel" filter="url(#pin-shadow)" style="pointer-events:all;cursor:pointer;"><path d="M0,-12 Q-9,-12 -9,-2 Q-9,8 0,12 Q9,8 9,-2 Q9,-12 0,-12 Z M0,12 L-4,20 L0,26 L4,20 Z" fill="#E24B4A"/><circle cx="0" cy="-2" r="5" fill="white" opacity="0.92"/><text x="0" y="1" text-anchor="middle" font-size="8" fill="#E24B4A" font-family="DM Sans,sans-serif" font-weight="800">!</text></g>
+          <circle id="pulse-asel" cx="0" cy="0" r="14" fill="none" stroke="#E24B4A" stroke-width="1.8" opacity="0.5"><animate attributeName="r" values="14;28;14" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/></circle>
+          <g id="label-asel"><rect x="0" y="-28" width="56" height="15" rx="4" fill="#E24B4A" opacity="0.94" filter="url(#label-shadow)"/><text x="28" y="-17" text-anchor="middle" font-size="7.5" fill="white" font-family="DM Sans,sans-serif" font-weight="600">Asel · Alert</text></g>
+
+          <!-- Damir — WARNING (amber) -->
+          <g id="pin-damir" filter="url(#pin-shadow)"><path d="M0,-10 Q-9,-10 -9,0 Q-9,10 0,14 Q9,10 9,0 Q9,-10 0,-10 Z M0,14 L-4,22 L0,27 L4,22 Z" fill="#EF9F27"/><circle cx="0" cy="0" r="5" fill="white" opacity="0.92"/><text x="0" y="4" text-anchor="middle" font-size="9" fill="#EF9F27" font-family="DM Sans,sans-serif" font-weight="700">~</text></g>
+          <circle id="pulse-damir" cx="0" cy="0" r="10" fill="none" stroke="#EF9F27" stroke-width="1.2"><animate attributeName="r" values="11;22;11" dur="3.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0;0.4" dur="3.5s" repeatCount="indefinite"/></circle>
+
+          <!-- Bolat — SAFE (green) -->
+          <g id="pin-bolat" filter="url(#pin-shadow)"><path d="M0,-10 Q-8,-10 -8,0 Q-8,10 0,14 Q8,10 8,0 Q8,-10 0,-10 Z M0,14 L-4,21 L0,26 L4,21 Z" fill="#1D9E75"/><circle cx="0" cy="0" r="4" fill="white" opacity="0.92"/></g>
+
+          <!-- Zarina — OFFLINE (grey) -->
+          <g id="pin-zarina" opacity="0.65"><path d="M0,-10 Q-8,-10 -8,0 Q-8,10 0,14 Q8,10 8,0 Q8,-10 0,-10 Z M0,14 L-4,21 L0,26 L4,21 Z" fill="#aaa" stroke="#bbb" stroke-width="1.2" stroke-dasharray="3 2"/><circle cx="0" cy="0" r="4" fill="white" opacity="0.7"/></g>
+          <circle id="pulse-zarina" cx="0" cy="0" r="15" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+          <g id="label-zarina"><rect x="-44" y="14" width="88" height="15" rx="4" fill="white" opacity="0.96" filter="url(#label-shadow)"/><text x="0" y="24" text-anchor="middle" font-size="7.5" fill="#A32D2D" font-family="DM Sans,sans-serif" font-weight="600">⚠ Last seen 22 min ago</text></g>
+
+          <!-- Madina — SAFE (green) -->
+          <g id="pin-madina" filter="url(#pin-shadow)"><path d="M0,-10 Q-8,-10 -8,0 Q-8,10 0,14 Q8,10 8,0 Q8,-10 0,-10 Z M0,14 L-4,21 L0,26 L4,21 Z" fill="#1D9E75"/><circle cx="0" cy="0" r="4" fill="white" opacity="0.92"/></g>
+
+          <!-- Kanat — SAFE (blue) -->
+          <g id="pin-kanat" filter="url(#pin-shadow)"><path d="M0,-10 Q-8,-10 -8,0 Q-8,10 0,14 Q8,10 8,0 Q8,-10 0,-10 Z M0,14 L-4,21 L0,26 L4,21 Z" fill="#378ADD"/><circle cx="0" cy="0" r="4" fill="white" opacity="0.92"/></g>
+
+          <!-- Location pill -->
+          <rect x="4" y="4" width="172" height="20" rx="5" fill="rgba(255,255,255,0.97)" filter="url(#label-shadow)"/>
+          <circle cx="14" cy="14" r="4" fill="#1a73e8"/><circle cx="14" cy="14" r="1.8" fill="white"/>
+          <text x="22" y="14" dominant-baseline="middle" font-size="8.5" fill="#1a1c18" font-family="DM Sans,sans-serif" font-weight="600">Shymbulak · Ile-Alatau NP</text>
+
+          <!-- Compass -->
+          <circle cx="460" cy="22" r="13" fill="rgba(255,255,255,0.97)" filter="url(#label-shadow)"/>
+          <polygon points="460,10 457,20 460,18 463,20" fill="#e24b4a"/>
+          <polygon points="460,34 457,24 460,26 463,24" fill="#ccc"/>
+          <text x="460" y="14" text-anchor="middle" dominant-baseline="middle" font-size="7" fill="#e24b4a" font-family="DM Sans,sans-serif" font-weight="700">N</text>
+        </svg>
+
+        <!-- LIVE badge -->
+        <div style="position:absolute;top:8px;right:8px;z-index:10;">
+          <div style="background:rgba(255,255,255,0.95);border-radius:5px;padding:4px 9px;font-size:9px;font-weight:600;color:#3c4043;box-shadow:0 1px 4px rgba(0,0,0,0.18);display:flex;align-items:center;gap:5px;">
+            <span class="live-dot" aria-hidden="true"></span> LIVE · 6 tracked
+          </div>
+        </div>
+
+      </div><!-- end map-box -->
+
+      <!-- User Panel -->
+      <div class="user-panel">
+        <div class="user-panel__head">
+          <span id="up-hikers">Active users</span>
+          <span id="up-hikers-sub">18 registered today</span>
+        </div>
+        <div class="offline-summary">
+          <div class="offline-summary__item"><span class="signal-dot signal-online"></span> <span id="os-online">4 online</span></div>
+          <div class="offline-summary__item"><span class="signal-dot signal-warning"></span> <span id="os-weak">1 weak signal</span></div>
+          <div class="offline-summary__item"><span class="signal-dot signal-offline"></span> <span id="os-offline">1 offline (&gt;15 min)</span></div>
+        </div>
+        <div class="u-list" role="list">
+
+          <div class="u-row selected" data-hiker="asel" role="listitem">
+            <div class="av av--red" aria-hidden="true">AS</div>
+            <div class="u-info">
+              <div class="u-name"><span class="signal-dot signal-online" aria-label="Online"></span> Demo User A</div>
+              <div id="u1-sub" class="u-sub">Trail A · 3,200m · no movement 47 min</div>
+            </div>
+            <span id="badge-u1" class="badge b-red">Alert</span>
+            <span class="last-seen" id="ls-u1">now</span>
+            <button id="med-u1" class="btn-med" data-med="asel">Med info</button>
+          </div>
+
+          <div class="u-row" data-hiker="damir" role="listitem">
+            <div class="av av--amber" aria-hidden="true">DM</div>
+            <div class="u-info">
+              <div class="u-name"><span class="signal-dot signal-warning" aria-label="Weak signal"></span> Demo User B</div>
+              <div id="u2-sub" class="u-sub">Trail B · 2,600m · slow pace</div>
+            </div>
+            <span id="badge-u2" class="badge b-warn">Warn</span>
+            <span class="last-seen" id="ls-u2">8 min ago</span>
+            <button id="med-u2" class="btn-med" data-med="damir">Med info</button>
+          </div>
+
+          <div class="u-row" data-hiker="bolat" role="listitem">
+            <div class="av av--green" aria-hidden="true">BT</div>
+            <div class="u-info">
+              <div class="u-name"><span class="signal-dot signal-online" aria-label="Online"></span> Demo User C</div>
+              <div id="u3-sub" class="u-sub">Trail A · 2,100m · descending</div>
+            </div>
+            <span id="badge-u3" class="badge b-green">Safe</span>
+            <span class="last-seen" id="ls-u3">2 min ago</span>
+            <button id="med-u3" class="btn-med" data-med="bolat">Med info</button>
+          </div>
+
+          <div class="u-row offline" data-hiker="zarina" role="listitem">
+            <div class="av av--grey" aria-hidden="true">ZA</div>
+            <div class="u-info">
+              <div class="u-name"><span class="signal-dot signal-offline" aria-label="Offline"></span> Demo User D</div>
+              <div id="u4-sub" class="u-sub">Trail C · 2,900m · offline</div>
+            </div>
+            <span id="badge-u4" class="badge b-offline">Offline</span>
+            <span class="last-seen" id="ls-u4" style="color:var(--red);font-weight:500;">22 min ago</span>
+            <button id="med-u4" class="btn-med" data-med="zarina">Med info</button>
+          </div>
+
+          <div class="u-row" data-hiker="madina" role="listitem">
+            <div class="av av--blue" aria-hidden="true">MA</div>
+            <div class="u-info">
+              <div class="u-name"><span class="signal-dot signal-online" aria-label="Online"></span> Demo User E</div>
+              <div id="u5-sub" class="u-sub">Trail D · 1,800m · ascending</div>
+            </div>
+            <span id="badge-u5" class="badge b-green">Safe</span>
+            <span class="last-seen" id="ls-u5">1 min ago</span>
+            <button id="med-u5" class="btn-med" data-med="madina">Med info</button>
+          </div>
+
+          <div class="u-row" data-hiker="kanat" role="listitem">
+            <div class="av av--green" aria-hidden="true">KS</div>
+            <div class="u-info">
+              <div class="u-name"><span class="signal-dot signal-online" aria-label="Online"></span> Demo User F</div>
+              <div id="u6-sub" class="u-sub">Trail B · 2,300m · on pace</div>
+            </div>
+            <span id="badge-u6" class="badge b-green">Safe</span>
+            <span class="last-seen" id="ls-u6">4 min ago</span>
+            <button id="med-u6" class="btn-med" data-med="kanat">Med info</button>
+          </div>
+
+        </div><!-- end u-list -->
+
+        <div class="ai-bar">
+          <span class="ai-bar__tag">AI</span>
+          <span id="ai-msg"><strong>Demo User A</strong> has not moved in 47 min at 3,200m. Sunset in 17 min — immediate descent required. <strong>Demo User D</strong> has been offline for 22 min at 2,900m — last known position marked on map.</span>
+        </div>
+      </div>
+
+    </div><!-- end panel -->
+  </main>
+
+</div><!-- end #dashboard-page -->
+
+
+<!-- ════════════════════════════════════════
+     MODALS (outside both page divs — always in DOM)
+════════════════════════════════════════ -->
+
+<!-- SIGN IN -->
+<div class="modal-overlay" id="signin-overlay" role="dialog" aria-modal="true" aria-labelledby="signin-title">
+  <div class="modal-card modal-card--sm">
+    <div class="modal-header">
+      <h2 id="signin-title">🔑 Sign In</h2>
+      <button class="modal-close" id="signin-close-btn" aria-label="Close">&#x2715;</button>
+    </div>
+    <div class="modal-body">
+      <div id="signin-api-error" class="api-error" hidden></div>
+      <div id="signin-demo-note" class="demo-note" hidden>
+        ℹ️ <strong>Demo version</strong> — the backend isn't connected yet, so sign-in won't complete. To explore the dashboard, use the <em>View live demo</em> button on the home page.
+      </div>
+      <div class="field"><label for="si-phone">Phone number</label><input type="tel" id="si-phone" placeholder="+7 700 000 0000" autocomplete="off"/></div>
+      <div class="field"><label for="si-password">Password</label><input type="password" id="si-password" placeholder="••••••••" autocomplete="off"/></div>
+      <button class="btn-submit" id="signin-submit-btn">Sign In →</button>
+      <!-- REG-2: inline styles replaced with CSS classes -->
+      <p class="modal-footer-note">Don't have an account? <a href="#" id="signin-to-reg" class="modal-footer-link">Register here</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- REGISTRATION -->
+<div class="modal-overlay" id="reg-overlay" role="dialog" aria-modal="true" aria-labelledby="reg-modal-title">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h2 id="reg-modal-title">🏔️ Register</h2>
+      <button class="modal-close" id="reg-close-btn" aria-label="Close">&#x2715;</button>
+    </div>
+    <div class="modal-body" id="reg-form-body">
+      <div class="form-section" id="reg-s1">Personal details</div>
+      <div class="form-row">
+        <div class="field"><label id="reg-fname-label" for="r-fname">First name</label><input type="text" id="r-fname" placeholder="e.g. Asel" autocomplete="given-name"/></div>
+        <div class="field"><label id="reg-lname-label" for="r-lname">Last name</label><input type="text" id="r-lname" placeholder="e.g. Seitkali" autocomplete="family-name"/></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label id="reg-age-label" for="r-age">Age</label><input type="number" id="r-age" placeholder="28" min="1" max="120"/></div>
+        <div class="field"><label id="reg-phone-label" for="r-phone">Phone</label><input type="tel" id="r-phone" placeholder="+7 700 000 0000" autocomplete="tel"/></div>
+      </div>
+      <div class="field">
+        <label id="reg-trail-label" for="r-trail">Trail</label>
+        <select id="r-trail">
+          <option value="">Select a trail</option>
+          <option value="A">Trail A · Summit (3,200m)</option>
+          <option value="B">Trail B · Shymbulak (3,450m)</option>
+          <option value="C">Trail C · East Ridge</option>
+          <option value="D">Trail D · Valley Loop</option>
+        </select>
+      </div>
+      <div class="field">
+        <label id="reg-duration-label">Journey duration</label>
+        <div class="duration-grid">
+          <button type="button" class="btn-duration" data-val="1">1 day</button>
+          <button type="button" class="btn-duration" data-val="2">2 days</button>
+          <button type="button" class="btn-duration" data-val="3">3 days</button>
+          <button type="button" class="btn-duration" data-val="4+">4+ days</button>
+        </div>
+        <input type="hidden" id="r-duration" value=""/>
+      </div>
+      <div class="field">
+        <label>📍 GPS location</label>
+        <div id="gps-status" class="gps-status">Requesting GPS…</div>
+      </div>
+      <div class="form-section" id="reg-s2">Blood type</div>
+      <div class="blood-grid">
+        <button type="button" class="btn-blood">A+</button>
+        <button type="button" class="btn-blood">A−</button>
+        <button type="button" class="btn-blood">B+</button>
+        <button type="button" class="btn-blood">B−</button>
+        <button type="button" class="btn-blood">AB+</button>
+        <button type="button" class="btn-blood">AB−</button>
+        <button type="button" class="btn-blood">O+</button>
+        <button type="button" class="btn-blood">O−</button>
+      </div>
+      <div class="form-section" id="reg-s3">Allergies</div>
+      <div id="reg-allergy-hint" class="form-hint">Select all that apply, or type below</div>
+      <div class="chip-group">
+        <button type="button" class="chip">Penicillin</button>
+        <button type="button" class="chip">Aspirin</button>
+        <button type="button" class="chip">Ibuprofen</button>
+        <button type="button" class="chip">Bee stings</button>
+        <button type="button" class="chip">Nuts</button>
+        <button type="button" class="chip">Shellfish</button>
+        <button type="button" class="chip">Latex</button>
+        <button type="button" class="chip">None</button>
+      </div>
+      <div class="field"><label id="reg-allergy-other-label" for="r-allergy-other">Other allergies or medical conditions</label><textarea id="r-allergy-other" placeholder="e.g. asthma, diabetes, other medications..."></textarea></div>
+      <div class="form-section" id="reg-s4">SOS / Emergency contact</div>
+      <div class="form-row">
+        <div class="field"><label id="reg-sos-name-label" for="r-sos-name">Contact name</label><input type="text" id="r-sos-name" placeholder="e.g. Daulet Seitkali"/></div>
+        <div class="field"><label id="reg-sos-rel-label" for="r-sos-rel">Relationship</label><input type="text" id="r-sos-rel" placeholder="e.g. Brother"/></div>
+      </div>
+      <div class="field"><label id="reg-sos-phone-label" for="r-sos-phone">Contact phone</label><input type="tel" id="r-sos-phone" placeholder="+7 701 000 0000"/></div>
+      <div class="field"><label id="reg-sos-phone2-label" for="r-sos-phone2">Secondary contact (optional)</label><input type="tel" id="r-sos-phone2" placeholder="+7 702 000 0000"/></div>
+      <div id="reg-api-error" class="api-error" hidden></div>
+      <div id="reg-demo-note" class="demo-note" hidden>
+        ℹ️ <strong>Demo version</strong> — registration forms are fully functional but the backend isn't connected yet, so your data won't be saved. This will work once the live server is deployed.
+      </div>
+      <button type="button" id="reg-submit-btn" class="btn-submit">✓ Register &amp; save medical info</button>
+    </div>
+    <div class="reg-success" id="reg-success">
+      <span class="reg-success__icon">✅</span>
+      <h3 id="reg-success-h">Registered!</h3>
+      <p id="reg-success-p">Your medical profile has been saved and is now available to rescue teams on the admin dashboard.<br><br>You will appear in the active users list once location sharing is enabled.</p>
+      <br/>
+      <button type="button" id="reg-done-btn" class="btn-submit btn-submit--centered">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- MED INFO -->
+<div class="med-overlay" id="med-overlay" role="dialog" aria-modal="true" aria-labelledby="med-name">
+  <div class="med-modal">
+    <button class="med-modal__close" id="med-close-btn" aria-label="Close">&#x2715;</button>
+    <div class="med-modal__av" id="med-av" aria-hidden="true">AS</div>
+    <div class="med-modal__name" id="med-name">Demo User A</div>
+    <div class="med-modal__sub"  id="med-sub">Trail A · 3,200m</div>
+    <div class="med-modal__grid">
+      <div class="med-field"><div id="med-age-label" class="med-field__label">Age</div><div class="med-field__val" id="med-age">28</div></div>
+      <div class="med-field"><div id="med-blood-label" class="med-field__label">Blood type</div><div class="med-field__val" id="med-blood">B+</div></div>
+    </div>
+    <div class="med-allergy"><div id="med-allergy-label" class="med-field__label">⚠ Allergies</div><div class="med-field__val" id="med-allergy">Penicillin, bee stings</div></div>
+    <div class="med-sos"><div id="med-sos-label" class="med-field__label">📞 SOS / Emergency contact</div><div class="med-field__val" id="med-sos">Demo Contact A (Brother) · +7 700 000 0001</div></div>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div id="toast-container" aria-live="polite" aria-atomic="false"></div>
+
+<!-- ════════════════════════════════════════
+     SCRIPTS (load order matters)
+════════════════════════════════════════ -->
+<!-- REG-8: sunset.js is imported by main.js — no second script tag needed -->
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
