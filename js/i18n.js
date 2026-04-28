@@ -89,6 +89,27 @@ const i18n = {
     'err.signin.phone':'Please enter your phone number.',
     'err.signin.pass':'Please enter your password.',
     'online.label':'online','weak.label':'weak signal','offlineLong.label':'offline (>15 min)',
+    // Landing register section
+    'land.tag':'🛡️ Get started',
+    'land.title':'Register or Sign In',
+    'land.sub':'Join TauSu Guard to stay safe in the mountains. Register your profile with medical info and emergency contacts — or sign in to your existing account.',
+    'land.reg.btn':'Register',
+    'land.signin.btn':'Sign In',
+    // Dashboard topbar
+    'btn.test.alert':'Test alert',
+    // Sign-in modal
+    'signin.title':'Sign In',
+    // Legend
+    'legend.title':'Legend',
+    'legend.alert':'Alert · no movement',
+    'legend.warn':'Warning · weak signal',
+    'legend.safe':'Safe · online',
+    'legend.offline':'Offline >15 min',
+    'legend.cp':'Checkpoint',
+    'legend.trailA':'Trail A · Summit',
+    'legend.trailB':'Trail B · Shymbulak',
+    'legend.trailC':'Trail C · E.Ridge',
+    'legend.trailD':'Trail D · Valley',
   },
 
   ru: {
@@ -162,6 +183,23 @@ const i18n = {
     'err.sos':'Введите телефон экстренного контакта.',
     'err.signin.phone':'Введите номер телефона.','err.signin.pass':'Введите пароль.',
     'online.label':'онлайн','weak.label':'слабый сигнал','offlineLong.label':'офлайн (>15 мин)',
+    'land.tag':'🛡️ Начать',
+    'land.title':'Регистрация или Вход',
+    'land.sub':'Присоединяйтесь к TauSu Guard, чтобы оставаться в безопасности в горах. Зарегистрируйте профиль с медицинской информацией и экстренными контактами.',
+    'land.reg.btn':'Зарегистрироваться',
+    'land.signin.btn':'Войти',
+    'btn.test.alert':'Тест уведомления',
+    'signin.title':'Вход',
+    'legend.title':'Легенда',
+    'legend.alert':'Тревога · нет движения',
+    'legend.warn':'Внимание · слабый сигнал',
+    'legend.safe':'Безопасно · онлайн',
+    'legend.offline':'Офлайн >15 мин',
+    'legend.cp':'Контрольная точка',
+    'legend.trailA':'Маршрут А · Вершина',
+    'legend.trailB':'Маршрут Б · Шымбулак',
+    'legend.trailC':'Маршрут В · Вост. хребет',
+    'legend.trailD':'Маршрут Г · Долина',
   },
 
   kz: {
@@ -235,6 +273,23 @@ const i18n = {
     'err.sos':'Шұғыл байланыс телефонын енгізіңіз.',
     'err.signin.phone':'Телефон нөмірін енгізіңіз.','err.signin.pass':'Құпия сөзді енгізіңіз.',
     'online.label':'онлайн','weak.label':'әлсіз сигнал','offlineLong.label':'офлайн (>15 мин)',
+    'land.tag':'🛡️ Бастау',
+    'land.title':'Тіркелу немесе Кіру',
+    'land.sub':'TauSu Guard-қа қосылыңыз. Медициналық ақпаратыңызды және шұғыл байланыстарыңызды тіркеңіз.',
+    'land.reg.btn':'Тіркелу',
+    'land.signin.btn':'Кіру',
+    'btn.test.alert':'Хабарландыруды тексеру',
+    'signin.title':'Кіру',
+    'legend.title':'Белгілер',
+    'legend.alert':'Дабыл · қозғалыс жоқ',
+    'legend.warn':'Ескерту · әлсіз сигнал',
+    'legend.safe':'Қауіпсіз · онлайн',
+    'legend.offline':'Офлайн >15 мін',
+    'legend.cp':'Бақылау нүктесі',
+    'legend.trailA':'А маршруты · Шың',
+    'legend.trailB':'Б маршруты · Шымбұлақ',
+    'legend.trailC':'В маршруты · Шығыс жотасы',
+    'legend.trailD':'Г маршруты · Алқап',
   },
 };
 
@@ -291,6 +346,27 @@ const DOM_MAP = [
   ['#reg-done-btn','reg.done'],
   ['#med-age-label','med.age'],['#med-blood-label','med.blood'],
   ['#med-allergy-label','med.allergy'],['#med-sos-label','med.sos'],
+  // Landing register section
+  ['#land-reg-tag','land.tag'],
+  ['#land-reg-title','land.title'],
+  ['#land-reg-sub','land.sub'],
+  ['#land-reg-btn-text','land.reg.btn'],
+  ['#land-signin-btn-text','land.signin.btn'],
+  // Dashboard topbar
+  ['#btn-test-alert-text','btn.test.alert'],
+  // Sign-in modal title
+  ['#signin-title-text','signin.title'],
+  // Map legend
+  ['#legend-title','legend.title'],
+  ['#legend-alert','legend.alert'],
+  ['#legend-warn','legend.warn'],
+  ['#legend-safe','legend.safe'],
+  ['#legend-offline','legend.offline'],
+  ['#legend-cp','legend.cp'],
+  ['#legend-trailA','legend.trailA'],
+  ['#legend-trailB','legend.trailB'],
+  ['#legend-trailC','legend.trailC'],
+  ['#legend-trailD','legend.trailD'],
 ];
 
 const PLACEHOLDER_MAP = [
