@@ -4,23 +4,8 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- SEC-4 + SEC-5: Content Security Policy
-       frame-ancestors 'none' prevents clickjacking.
-       Adjust connect-src when you add your real API domain, e.g.:
-         connect-src 'self' https://api.tausuguard.kz https://api.open-meteo.com;
-  -->
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self';
-    style-src 'self' https://fonts.googleapis.com;
-    font-src https://fonts.gstatic.com;
-    frame-src https://www.google.com;
-    connect-src 'self' https://api.open-meteo.com;
-    img-src 'self' data:;
-    frame-ancestors 'none';
-    base-uri 'self';
-    form-action 'self';
-  "/>
+  <!-- Content Security Policy — adjusted for GitHub Pages hosting -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com data:; frame-src https://www.google.com; connect-src 'self' https://api.open-meteo.com; img-src 'self' data: blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"/>
 
   <!-- MIN-1: Prevent search engines indexing this demo before real backend is live -->
   <meta name="robots" content="noindex, nofollow"/>
@@ -74,12 +59,12 @@
   <!-- REGISTER / SIGN IN SECTION -->
   <section class="land-reg-section">
     <div class="land-reg-inner">
-      <div id="land-reg-tag" class="land-reg-tag">🛡️ Get started</div>
-      <div id="land-reg-title" class="land-reg-title">Register or Sign In</div>
-      <div id="land-reg-sub" class="land-reg-sub">Join TauSu Guard to stay safe in the mountains. Register your profile with medical info and emergency contacts — or sign in to your existing account.</div>
+      <div class="land-reg-tag">🛡️ Get started</div>
+      <div class="land-reg-title">Register or Sign In</div>
+      <div class="land-reg-sub">Join TauSu Guard to stay safe in the mountains. Register your profile with medical info and emergency contacts — or sign in to your existing account.</div>
       <div class="land-reg-btns">
-        <button id="land-reg-btn" class="btn-land-register">📋 <span id="land-reg-btn-text">Register</span></button>
-        <button id="land-signin-btn" class="btn-land-signin">🔑 <span id="land-signin-btn-text">Sign In</span></button>
+        <button id="land-reg-btn" class="btn-land-register">📋 Register</button>
+        <button id="land-signin-btn" class="btn-land-signin">🔑 Sign In</button>
       </div>
     </div>
   </section>
@@ -193,7 +178,7 @@
     </div>
     <div class="topbar__actions">
       <button id="btn-home"       class="reg-btn reg-btn--ghost">← Home</button>
-      <button id="btn-test-alert" class="reg-btn reg-btn--blue">🔔 <span id="btn-test-alert-text">Test alert</span></button>
+      <button id="btn-test-alert" class="reg-btn reg-btn--blue">🔔 Test alert</button>
       <button id="btn-register"   class="reg-btn">+ Register</button>
       <div class="lang-row" role="group" aria-label="Language">
         <button class="lb on">EN</button>
@@ -228,16 +213,16 @@
 
       <!-- Map Legend -->
       <div class="map-legend">
-        <span id="legend-title" class="map-legend__title">Legend</span>
-        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#E24B4A"/><circle cx="6" cy="5" r="2.2" fill="white"/></svg><span id="legend-alert">Alert · no movement</span></span>
-        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#EF9F27"/><circle cx="6" cy="5" r="2.2" fill="white"/></svg><span id="legend-warn">Warning · weak signal</span></span>
-        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#1D9E75"/><circle cx="6" cy="5" r="2.2" fill="white"/></svg><span id="legend-safe">Safe · online</span></span>
-        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#aaa" stroke="#bbb" stroke-width="1"/><circle cx="6" cy="5" r="2.2" fill="white" opacity="0.7"/></svg><span id="legend-offline">Offline &gt;15 min</span></span>
-        <span class="legend-item"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="white" stroke="#444" stroke-width="1.5"/><circle cx="6" cy="6" r="2.2" fill="#444"/></svg><span id="legend-cp">Checkpoint</span></span>
-        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#E24B4A" stroke-width="2.5" stroke-dasharray="5 3"/></svg><span id="legend-trailA">Trail A</span></span>
-        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#EF9F27" stroke-width="2.5" stroke-dasharray="5 3"/></svg><span id="legend-trailB">Trail B</span></span>
-        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#1D9E75" stroke-width="2.5" stroke-dasharray="5 3"/></svg><span id="legend-trailC">Trail C</span></span>
-        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#378ADD" stroke-width="2.5" stroke-dasharray="5 3"/></svg><span id="legend-trailD">Trail D</span></span>
+        <span class="map-legend__title">Legend</span>
+        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#E24B4A"/><circle cx="6" cy="5" r="2.2" fill="white"/></svg>Alert · no movement</span>
+        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#EF9F27"/><circle cx="6" cy="5" r="2.2" fill="white"/></svg>Warning · weak signal</span>
+        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#1D9E75"/><circle cx="6" cy="5" r="2.2" fill="white"/></svg>Safe · online</span>
+        <span class="legend-item"><svg width="11" height="15" viewBox="0 0 12 16" aria-hidden="true"><path d="M6,14 L2,9 Q0,7 0,5 A6,6 0 1,1 12,5 Q12,7 10,9 Z" fill="#aaa" stroke="#bbb" stroke-width="1"/><circle cx="6" cy="5" r="2.2" fill="white" opacity="0.7"/></svg>Offline &gt;15 min</span>
+        <span class="legend-item"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="white" stroke="#444" stroke-width="1.5"/><circle cx="6" cy="6" r="2.2" fill="#444"/></svg>Checkpoint</span>
+        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#E24B4A" stroke-width="2.5" stroke-dasharray="5 3"/></svg>Trail A</span>
+        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#EF9F27" stroke-width="2.5" stroke-dasharray="5 3"/></svg>Trail B</span>
+        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#1D9E75" stroke-width="2.5" stroke-dasharray="5 3"/></svg>Trail C</span>
+        <span class="legend-item"><svg width="22" height="6" viewBox="0 0 22 6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" stroke="#378ADD" stroke-width="2.5" stroke-dasharray="5 3"/></svg>Trail D</span>
       </div>
 
       <!-- Live Map -->
@@ -417,7 +402,7 @@
 <div class="modal-overlay" id="signin-overlay" role="dialog" aria-modal="true" aria-labelledby="signin-title">
   <div class="modal-card modal-card--sm">
     <div class="modal-header">
-      <h2 id="signin-title">🔑 <span id="signin-title-text">Sign In</span></h2>
+      <h2 id="signin-title">🔑 Sign In</h2>
       <button class="modal-close" id="signin-close-btn" aria-label="Close">&#x2715;</button>
     </div>
     <div class="modal-body">
